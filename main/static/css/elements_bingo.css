@@ -1,0 +1,56 @@
+body .messagesOuter {
+	margin: auto;
+}
+
+#questions {
+	border: 1px solid black;
+	width: 46%;
+	height: 50px;
+	margin: 0 auto;
+}
+
+#reset {
+/*	float: left;*/
+	margin: auto;
+}
+
+#play {
+/*	float: left;*/
+}
+
+#bingoHeadOuter {
+	margin-top: 20px;
+}
+
+.buttonOuter {
+	width: 100%;
+}
+
+.buttons {
+	height: 20px;
+	position: relative;
+	text-align: center;
+}
+
+.bingo {
+	width: 100%;
+}
+
+.bingoSquares {
+	margin: 0 auto;
+}
+
+.bingoHead {
+	width: 100px;
+	height: auto;
+}
+
+td {
+	width: auto;
+	height: auto;
+	border: 1px solid black;
+}
+
+#questions {
+	color: blue;
+}

@@ -1,0 +1,100 @@
+.space {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/17494.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tqFullDesign {
+    width: 50%;
+}
+
+.tqSmallLogo {
+    width: 20%;
+    margin-top: -10px;
+    margin-left: -17px;
+}
+
+.contact-street1 {
+    margin: 0 0 16px;
+    line-height: 1.75;
+    position: relative;
+}
+
+.contactPhone {
+    font-size: 0.9rem;
+}
+
+.container {
+    height: auto !important;
+}
+
+.about-head {
+    font-size: 3.5rem;
+    padding: 2rem 0 1rem 0;
+}
+
+.about-body {
+    border-top: 0;
+    width: auto;
+    border: 2px solid white;
+    padding: 30px 53px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.about-body {
+    width: 90%;
+    border-top: 2px solid white;
+    font-size: 1.1rem;
+    padding: 1.5rem;
+}
+
+.theme-body {
+    border-top: 0;
+    width: auto;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    padding: 30px 53px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.contact-me {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 767px) {
+    .tqFullDesign {
+        width: 78%;
+    }
+    .tqSmallLogo {
+        width: 50% !important;
+        margin-top: -11px;
+        margin-left: -0px;
+    }
+    .et-description-small {
+        margin-top: 0.6rem;
+        font-family: "Chakra Petch", sans-serif;
+        font-size: 1.4rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 0 0 0;
+    }
+    .about-body {
+        width: 90% !important;
+        border-top: 2px solid white;
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+    .contact-me {
+        background: transparent;
+        padding: 0;
+    }
+    .theme-body {
+        width: 90%;
+        border-top: 2px solid white;
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+}

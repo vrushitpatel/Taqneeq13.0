@@ -1,0 +1,57 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+{% block title %}Live Updates{% endblock %}
+
+
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/table.min.css"
+    integrity="sha512-NtvxKmBWfr6sEZ3y/qV4DTXPEXpP/VZZV5BEaCFxUukf7/cyktgYpfsxs2ERvisbDXfnLJfswd2DYEj0h+qAFA=="
+    crossorigin="anonymous" />
+<link rel="stylesheet" href="{% static '/css/liveupdates.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<!-- Live Container -->
+<div class="container">
+    <div class="livetext">Live Updates</div>
+    <hr>
+    <div class="live-container">
+        <table class="ui striped stackable celled large table">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Event Name</th>
+                    <th>Description</th>
+                    <th>Contact</th>
+                    <th>Join Event</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for event in events %}
+                <tr>
+                    <th class="center aligned">{{forloop.counter}}</th>
+                    <td>{{event.name}}</td>
+                    <td>{{event.desc}}</td>
+                    <td><a href="tel:{{event.contact}}"></a></td>
+                    <td><a href="{{event.ongoingurl}}">Link</a></td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- /Live Container -->
+
+{% endblock %}
+
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+    integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+    crossorigin="anonymous"></script>
+{% endblock %}

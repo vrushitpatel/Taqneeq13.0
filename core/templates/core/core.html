@@ -1,0 +1,296 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Team | Taqneeq13.0</title>
+    <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="shortcut icon" href="{% static 'img/tq_logo.png' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="{% static '/css/semantic.min.css' %}"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static '/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/core.css' %}">
+
+    <style>
+        .menu-main::before {
+            top: 28.5%;
+        }
+        
+        .space {
+            z-index: -1;
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .rectangle {
+                bottom: 4vw;
+            }
+            #FOOTER {
+                bottom: 13vw;
+            }
+        }
+    </style>
+
+</head>
+
+<body onload="getcore()">
+    <div class="space"></div>
+
+    <div class="headerspace"></div>
+
+    <!-- <a href="#" class="no-line logotype"><img src="{% static 'img/tq_logo.png' %}" alt="" class="tqSmallLogo"></a> -->
+
+    <!-- Menu -->
+    <nav>
+        <div class="menu-main">
+            <div class="bar1 longanimnd"></div>
+            <div class="bar2 longanimnd2"></div>
+            <div class="bar3 longanimnd3"></div>
+        </div>
+        <ul class="nav-links">
+            <li id="li1"><a class=" menuAfterClick1" href="{% url 'main:landing-page' %}">Home</a></li>
+            <li>
+                <a class="menuAfterClick3" href="#"></a>
+            </li>
+            <li><a class="menuAfterClick4" href="{% url 'events:ourevents' %}"> Events</a></li>
+            <li><a class="menuAfterClick2" href="{% url 'events:liveupdates' %}">Event Schedule</a></li>
+
+            <!-- <li><a class="menuAfterClick5" href="#con">Contact Us</a></li> -->
+            <li>
+                <a class="menuAfterClick5" href="#"></a>
+            </li>
+            <li><a class="menuAfterClick6" href="{% url 'core:teams-page' %}">Our Team</a></li>
+            <li>
+                <a class="menuAfterClick7" href="#"></a>
+            </li>
+        </ul>
+        <script src="{% static 'js/menu.js' %}"></script>
+    </nav>
+    <!-- Menu -->
+
+    <div class="coresegment" style="overflow-x:hidden;">
+        <div class="ui top attached tabular menu" id="coreTab">
+            <a class="item active" data-tab="Supercore">Super Core</a>
+            <a class="item" data-tab="Admin">Admin</a>
+            <a class="item" data-tab="AGM">Artist & Guest Management</a>
+            <a class="item" data-tab="DC">Digital Creatives</a>
+            <a class="item" data-tab="Events">Events</a>
+            <a class="item" data-tab="Informals">Informals</a>
+            <a class="item" data-tab="Logistics">Logistics</a>
+            <a class="item" data-tab="Marketing">Marketing</a>
+            <a class="item" data-tab="Photography">Photography</a>
+            <a class="item" data-tab="Publicity">Publicity</a>
+            <a class="item" data-tab="SMCW">Social Media & Content Writing</a>
+            <a class="item" data-tab="Workshops">Workshops</a>
+            <a class="item" data-tab="TS">Tech Support</a>
+        </div>
+
+        <div class="ui bottom attached tab segment active" data-tab="Supercore">
+            <div class="core-grid" id="Supercore">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="Admin">
+            <div class="core-grid" id="Admin">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="AGM">
+            <div class="core-grid" id="AGM">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="DC">
+            <div class="core-grid" id="DC">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="Events">
+            <div class="core-grid" id="Events">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="Informals">
+            <div class="core-grid" id="Informals">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="Logistics">
+            <div class="core-grid" id="Logistics">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="Marketing">
+            <div class="core-grid" id="Marketing">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="Photography">
+            <div class="core-grid" id="Photography">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="Publicity">
+            <div class="core-grid" id="Publicity">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="SMCW">
+            <div class="core-grid" id="SMCW">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="Workshops">
+            <div class="core-grid" id="Workshops">
+            </div>
+        </div>
+
+        <div class="ui bottom attached tab segment" data-tab="TS">
+            <div class="core-grid" id="TS">
+            </div>
+        </div>
+
+    </div>
+    <div class="rectangle ">
+        <a href="{% url 'events:liveupdates' %}">
+            <div class="campusam animation">
+                LIVE UPDATES
+            </div>
+        </a>
+    </div>
+
+    <div id="FOOTER">
+        <div class="icons-center">
+            <div class="icons animation">
+                <a href="https://www.facebook.com/taqneeqfest/" target="_blank">
+                    <img src="{% static 'svg/facebook_icon.svg' %}">
+                </a>
+            </div>
+            <div class="icons animation">
+                <a href="https://www.instagram.com/taqneeqfest/" target="_blank">
+                    <img src="{% static 'svg/insta.svg' %}">
+                </a>
+            </div>
+            <div class="icons animation" style="margin-left: 0;">
+                <a href="https://www.youtube.com/channel/UChCogXJ_-UmsMsCE3WY_PNQ" target="_blank">
+                    <img src="{% static 'svg/youtube.svg' %}">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="{% static 'js/jquery-3.5.1.min.js' %} "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js " integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin=" anonymous "></script>
+
+
+<script>
+    function getcore() {
+
+        allDept = {
+            "Supercore": "Super Core",
+            "Admin": "Admin",
+            "AGM": "Artist & Guest Managament",
+            "DC": "Digital Creatives",
+            "Events": "Events",
+            "Informals": "Informals",
+            "Logistics": "Logistics",
+            "Marketing": "Marketing",
+            "Photography": "Photography",
+            "Publicity": "Publicity",
+            "SMCW": "Social Media & Content Writing",
+            "Workshops": "Workshops",
+            "TS": "Tech Support"
+        }
+
+
+        $.getJSON('all/', function(items) {
+            for (var i = 0; i < items.length; i++) {
+                try {
+                    var tabName = items[i].fields.deptName;
+                    var dataTab = document.getElementById(tabName);
+
+                    var core = document.createElement('div');
+                    core.classList.add('core-item');
+                    core.classList.add('animated2s');
+                    core.classList.add('fadeIn');
+
+                    var coreBlock = document.createElement('div');
+                    coreBlock.classList.add('coreBlock');
+
+                    var coreImage = document.createElement('div');
+                    coreImage.classList.add('coreImage');
+
+                    var coreImg = document.createElement('div');
+                    coreImg.classList.add('coreImg');
+
+                    var image = document.createElement('img');
+                    image.setAttribute('src', "{% static 'img/core/CoreName.webp' %}".replace('CoreName', items[i].fields.name));
+                    coreImg.appendChild(image);
+
+                    var coreGif = document.createElement('div');
+                    coreGif.classList.add('coreGif');
+                    coreGif.style.display = "none";
+
+                    var image2 = document.createElement('img');
+                    image2.setAttribute('src', "" + items[i].fields.gifurl);
+                    coreGif.appendChild(image2);
+
+                    coreImage.appendChild(coreImg);
+                    coreImage.appendChild(coreGif);
+
+                    var coreInfo = document.createElement('div');
+                    coreInfo.classList.add('coreInfo');
+
+                    var coreName = document.createElement('div');
+                    coreName.classList.add('coreName');
+
+                    coreName.innerHTML = items[i].fields.name;
+                    coreInfo.appendChild(coreName);
+
+                    var corePost = document.createElement('div');
+                    corePost.classList.add('corePost');
+
+                    corePost.innerHTML = items[i].fields.position;
+                    coreInfo.appendChild(corePost);
+
+                    coreBlock.appendChild(coreImage);
+                    coreBlock.appendChild(coreInfo);
+                    core.appendChild(coreBlock);
+                    dataTab.appendChild(core);
+                } catch (err) {
+                    console.log(err);
+                }
+            }
+        });
+
+    }
+
+    function hoverin() {
+        document.getElementsByClassName('coreImg').style.display = 'none';
+        document.getElementsByClassName('coreGif').style.display = 'block';
+    }
+
+    setTimeout(function() {
+        $('.coreImage').hover(function() {
+            $(this).find('.coreImg').hide();
+            $(this).find('.coreGif').show();
+        }, function() {
+            $(this).find('.coreGif').hide();
+            $(this).find('.coreImg').show();
+        });
+    }, 2000);
+</script>
+
+<script src="{% static 'js/core.js' %} "></script>
+
+</html>

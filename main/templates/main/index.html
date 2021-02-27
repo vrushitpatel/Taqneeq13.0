@@ -1,0 +1,430 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <title>Taqneeq 13.0</title>
+    <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="shortcut icon" href="{% static 'img/tq_logo.png' %}">
+
+    <!-- FONTS -->
+    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static '/css/jquery.fullPage.css' %}">
+    <link rel="stylesheet" href="{% static '/css/jquery.mCustomScrollbar.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static '/css/glitch.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+    <link rel="stylesheet" href="{% static '/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static '/css/sponsors.css' %}">
+
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/menu.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic. com">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700,800;&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebasneueregular" type="text/css" />
+    <style>
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="space"></div>
+
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <!-- HEADER -->
+        <header class="site-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="#" class="no-line logotype"><img src="{% static 'img/tq_logo.png' %}" alt="" class="tqSmallLogo"></a>
+                    </div>
+                    <!-- Menu -->
+                    <nav>
+                        <div class="menu-main" onclick="hide()">
+                            <div class="bar1 longanimbase longanim"></div>
+                            <div class="bar2 longanimbase longanim2"></div>
+                            <div class="bar3 longanimbase longanim3"></div>
+                        </div>
+                        <ul class="nav-links">
+                            <li id="li1"><a class=" menuAfterClick1" href="#">Home</a></li>
+                            <li>
+                                <a class="menuAfterClick3" href="#"></a>
+                            </li>
+                            <li><a class="menuAfterClick4" href="{% url 'events:ourevents' %}"> Events</a></li>
+                            <li><a class="menuAfterClick2" href="{% url 'events:liveupdates' %}">Event Schedule</a></li>
+
+                            <!-- <li><a class="menuAfterClick5" href="#con">Contact Us</a></li> -->
+                            <li>
+                                <a class="menuAfterClick5" href="#"></a>
+                            </li>
+                            <li><a class="menuAfterClick6" href="{% url 'core:teams-page' %}">Our Team</a></li>
+                            <li>
+                                <a class="menuAfterClick7" href="#"></a>
+                            </li>
+                        </ul>
+                        <script src="{% static 'js/menu.js' %}"></script>
+                    </nav>
+                    <!-- Menu -->
+                </div>
+            </div>
+        </header>
+        <!-- /HEADER -->
+
+        <!-- CONTENT -->
+        <section class="site-content">
+            <div id="fullpage" class="fullpage-wrapper">
+                <div class="all-section">
+                    <!-- Slide1-Home-->
+                    <div class="sections" data-title="Home">
+                        <div class="section-content">
+                            <div class="section-wrap section-center" style="margin-top: -2.5rem;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center">
+                                            <h2 class="et-description"><img src="{% static 'img/taqneeqpatterntq.png' %}" alt="" class="tqFullDesign"></h2>
+                                            <hr style="margin: 25px auto 10px auto;">
+                                            <div class="et-description-small">Technical Fest of NMIMS' MPSTME</div>
+                                        </div>
+                                        <!-- col-xs-12 -->
+                                    </div>
+                                    <!-- row -->
+                                </div>
+                                <!-- container -->
+                            </div>
+                            <!-- section-wrap -->
+                        </div>
+                        <!-- section-content -->
+                    </div>
+                    <!-- /Slide1-Home-->
+
+                    <!-- Slide2-->
+                    <div class="sections about-block" data-title="About Us">
+                        <div class="section-content">
+                            <div class="section-wrap">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center about-content">
+                                            <h3>About Us</h3>
+                                            <hr>
+                                            <div class="et-description-small about-body">
+                                                Taqneeq, MPSTME’s Annual Technical Fest is one of the biggest fests witnessed by Mumbai. Taqneeq is a three-day celebration of technology with a rich history which witnesses the presence of the who’s who of the nation. Taqneeq is fast becoming the paradigm
+                                                of how a technical fest should be and it is technology in its purest form. It is a technological marvel which provides dreamers and believers with a stage to showcase their talents and how one can conquer
+                                                almost anything with the right technology.
+                                                <br><br>Team Taqneeq strives to achieve the pinnacle of quality and bring out the finest in everyone and it is now back with it’s 12th edition and is all set to get bigger and better this year with Taqneeq
+                                                all set to be expanded into a three day fest to be held on 27th, 28th of February and 1st of March.
+                                            </div>
+                                        </div>
+                                        <!-- col-xs-12 -->
+                                    </div>
+                                    <!-- row -->
+                                </div>
+                                <!-- container -->
+                            </div>
+                            <!-- section-wrap -->
+                        </div>
+                        <!-- section-content -->
+                    </div>
+                    <!-- /Slide2-->
+
+                    <!-- Slide3-Theme-->
+                    <div class="sections theme-block" data-title="Theme">
+                        <div class="section-content">
+                            <div class="section-wrap">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center theme-content">
+                                            <h3>Theme</h3>
+                                            <hr>
+                                            <div class="et-description-small theme-body">
+                                                The 21st century race to send humans into space consists of buying a piece of land on the Moon, creating potential plans for 15 minute space vacations, and an extensive search for habitable planets. Now, instead of nuclear superpowers warring to emerge
+                                                victorious within the Earth's orbit, companies like SpaceX, Blue Origin and Virgin Galactic are battling to make space travel and colonization more readily available and affordable.<br><br>From
+                                                our earliest hunter gatherer steps, we have endeavored to explore and learn more about the far regions of the planet we inhabit. This instinct has allowed us to build civilization and expand it into the
+                                                billions that walk the Earth today. Exploring into space is just an extension of our primal instinct and an opportunity to not only discover new worlds, but also to build advanced technologies. Someday,
+                                                humans would like to traverse the far ends of the infinitely large universe due to the awe they possess for the enigma of space.
+                                            </div>
+                                        </div>
+                                        <!-- col-xs-12 -->
+                                    </div>
+                                    <!-- row -->
+                                </div>
+                                <!-- container -->
+                            </div>
+                            <!-- section-wrap -->
+                        </div>
+                        <!-- section-content -->
+                    </div>
+                    <!-- /Slide3-Theme-->
+
+                    <!-- Slide5-Sponsors -->
+                    <!-- <div class="sections sponsors-block" data-title="Sponsers">
+                        <div class="section-content">
+                            <div class="section-wrap">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center about-content">
+                                            <h3>Sponsers</h3>
+                                            <hr>
+                                            <div class="slideshow-container">
+
+                                                <div class="mySlides fades">
+                                                    <div class="contain">
+                                                        <div class="sponser-image">
+                                                            <img src="http://placekitten.com/450/450">
+                                                        </div>
+                                                        <div class="sponser-text">
+                                                            <p>Name 1</p>
+                                                            <p>Tagline 1</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mySlides fades">
+                                                    <div class="contain">
+                                                        <div class="sponser-image">
+                                                            <img src="http://placekitten.com/450/450">
+                                                        </div>
+                                                        <div class="sponser-text">
+                                                            <p>Name 2</p>
+                                                            <p>Tagline 2</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mySlides fades">
+                                                    <div class="contain">
+                                                        <div class="sponser-image">
+                                                            <img src="http://placekitten.com/450/450">
+                                                        </div>
+                                                        <div class="sponser-text">
+                                                            <p>Name 3</p>
+                                                            <p>Tagline 3</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <a class="prev noselect" onclick="plusSlides(-1)">&#10094;</a>
+                                                <a class="next noselect" onclick="plusSlides(1)">&#10095;</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Slide5-Sponsors -->
+
+                    <!-- Slide6-Contact -->
+                    <div class="sections contact-block" data-title="Contact" id="con">
+                        <div class="section-content">
+                            <div class="section-wrap">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center">
+                                            <h3>Contact</h3>
+                                            <hr>
+                                            <div class="contact-me border-gradient border-gradient-hidden-xs">
+                                                <div class="row m0">
+                                                    <div class="col-sm-6 text-center">
+                                                        <div class="contact-form border-gradient-visible-xs">
+                                                            <form id="contactform" class="form-styler" role="form" data-toggle="validator" autocomplete="no">
+                                                                <div class="form-group">
+                                                                    <input type="text" required placeholder="Name" name="fakename" autocomplete="no">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="email" required placeholder="Email" name="fakeemail" autocomplete="no">
+                                                                </div>
+                                                                <div class="contact-comment form-group">
+                                                                    <textarea placeholder="Message" required name="fakecomment" autocomplete="no"></textarea>
+                                                                </div>
+                                                                <div class="btn submit-form form-sender">
+                                                                    <input type="submit" value="send">
+                                                                    <span class="error"></span>
+                                                                    <span class="success">
+                                                                        <svg xmlns="//www.w3.org/2000/svg"
+                                                                            xmlns:xlink="//www.w3.org/1999/xlink"
+                                                                            x="0px" y="0px" viewBox="0 0 29 23"
+                                                                            enable-background="new 0 0 29 23">
+                                                                            <polyline fill="#FFFFFF"
+                                                                                points="0.3,10.2 1.8,8.8 11.4,19.3 27.4,0.4 28.9,1.7 12.9,20.6 11.5,22.3 9.9,20.6 0.3,10.2">
+                                                                            </polyline>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <span class="progress"></span>
+                                                                </div>
+                                                            </form>
+                                                            <div class="form-message"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 text-left contact-info">
+
+                                                        <div class="contact-street1">
+                                                            <i class="fa fa-map-marker"></i>
+                                                            <div class="dashed1">
+                                                                Address <br> Campus: Mukesh Patel School of Technology Management and Engineering, Mumbai.
+                                                            </div>
+                                                        </div>
+
+                                                        <p class="contact-tell">
+                                                            <i class="fa fa-phone"></i>
+                                                            <a href="tel:+919820050976" class="contactPhone">Yash Yadav
+                                                                : +91 9820050976</a><br>
+                                                            <a href="tel:+918779644002" class="contactPhone">Mehul Sahni
+                                                                : +91 8779644002</a>
+                                                        </p>
+
+                                                        <div class="contact-email">
+                                                            <i class="fa fa-envelope-o"></i>
+                                                            <div class="dashed">
+                                                                <a href="mailto:hello@taqneeqfest.com" class="contactPhone">hello@taqneeqfest.com</a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- col-xs-12 -->
+                                    </div>
+                                    <!-- row -->
+                                </div>
+                                <!-- container -->
+                            </div>
+                            <!-- section-wrap -->
+                        </div>
+                        <!-- section-content -->
+                    </div>
+                    <!-- Slide6-Contact -->
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /CONTENT -->
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-xs-12 text-center-xs">
+                        <div class="copyright">
+                            <!-- Taqneeq 13.0, MPSTME. -->
+
+                            <div class="rectangle" id="live">
+                                <a href="{% url 'events:liveupdates' %}">
+                                    <div class="campusam animation">
+                                        LIVE UPDATES
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div id="FOOTER">
+                                <div class="icons-center">
+                                    <div class="icons animation">
+                                        <a href="https://www.facebook.com/taqneeqfest/" target="_blank">
+                                            <img src="{% static 'svg/facebook_icon.svg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="icons animation">
+                                        <a href="https://www.instagram.com/taqneeqfest/" target="_blank">
+                                            <img src="{% static 'svg/insta.svg' %}">
+                                        </a>
+                                    </div>
+                                    <div class="icons animation" style="margin-left: 0;">
+                                        <a href="https://www.youtube.com/channel/UChCogXJ_-UmsMsCE3WY_PNQ" target="_blank">
+                                            <img src="{% static 'svg/youtube.svg' %}">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /WRAPPER -->
+
+</body>
+
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.fullPage.min.js' %}"></script>
+<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+<script src="{% static 'js/jquery.swiper.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.inview.min.js' %}"></script>
+<script src="{% static 'js/jquery.placeholder.min.js' %}"></script>
+<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'js/jquery.countdown.js' %}"></script>
+<!-- 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="{% static 'js/googlemap.js' %}"></script> -->
+<script src="{% static 'js/validator.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+<!--<script src="{% static 'js/slider.js' %}"></script>-->
+<script src="{% static 'js/custom.js' %}"></script>
+
+<script>
+    const live = document.getElementById('live');
+    const social = document.getElementById('FOOTER');
+    // const sidebar = document.getElementById('fp-nav');
+
+    window.onload = function() {
+
+    };
+    var a = 1;
+
+    function hide() {
+        if (a == 0) {
+            live.style.display = "flex";
+            social.style.display = "block";
+            if ($(window).width() < 767) {
+                // document.getElementById('swiperNav').style.display ="block";
+            } else {
+                document.getElementById('fp-nav').style.display = "block";
+            }
+            a = 1;
+        } else {
+            live.style.display = "none";
+            social.style.display = "none";
+            if ($(window).width() < 767) {
+                // document.getElementById('swiperNav').style.display ="none";
+            } else {
+                document.getElementById('fp-nav').style.display = "none";
+            }
+            a = 0;
+        }
+    }
+</script>
+
+</html>

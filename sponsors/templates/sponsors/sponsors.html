@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Wear the waste | H&M Conscious Exclusive</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link type="text/css" rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+  <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+</head>
+
+<body>
+  <div class="scroll-area"></div>
+  <div class="videos">
+    <video id="campagneVideoLoop" src="{% static 'assets/video/campagne-loop.mp4' %}" preload="metadata" autoplay muted
+      loop playsinline></video>
+    <video id="entretienVideoLoop" src="{% static 'assets/video/entretien-loop.mp4' %}" preload="metadata" autoplay
+      muted loop playsinline></video>
+  </div>
+  <div class="pages">
+    <div id="campagnePage" class="page page-video">
+      <div class="video-player">
+        <video id="campagneVideo"
+          src="{% static 'assets/video/6212_Conscious_Exclusive_ONLINE_FR_fr_1920x1080_ONLINE-srt.mp4' %}"
+          preload="none" controls playsinline>
+        </video>
+      </div>
+    </div>
+    <div id="collectionPage" class="page"></div>
+    <div id="innovationsPage" class="page"></div>
+    <div id="entretienPage" class="page page-video">
+      <div class="video-player">
+        <video id="entretienVideo" src="{% static 'assets/video/HM_CONSCIOUS_EXCLUSIVE_AW2020_201102_R.mp4' %}"
+          preload="none" controls playsinline></video>
+      </div>
+    </div>
+  </div>
+  <div class="main-logo logo">
+    <img src="{% static 'assets/img/logo.png' %}" />
+  </div>
+  <div class="arrow-intro arrow-scroll-down">
+    <img src="{% static 'assets/img/arrow-scroll-down.svg' %}" />
+  </div>
+  <div class="menu">
+    <nav class="nav-menu">
+      <button class="menu-item scroll-anchor" data-anchor="#campagne"><span>Wear the Waste</span></button>
+      <button class="menu-item scroll-anchor" data-anchor="#collection"><span>La collection</span></button>
+      <button class="menu-item scroll-anchor" data-anchor="#innovations"><span>Les innovations</span></button>
+      <button class="menu-item scroll-anchor" data-anchor="#entretien">
+        <span>En coulisses avec Ann-Sofie Johansson,</span><br><span>Zinnia Kumar et Ella Soccorsi</span>
+      </button>
+      <a id="downloadLink" class="menu-item"
+        href="{% static 'assets/files/H%26M_Conscious_Exclusive_2020_-_Dossier_de_presse.zip' %}"><span>Dossier de
+          presse</span></a>
+      <a class="menu-item" href="https://www2.hm.com/fr_fr/hm-sustainability/lets-change.html"
+        target="_blank"><span>hm.com</span></a>
+      <a class="menu-item" href="https://www2.hm.com/fr_fr/life/culture/inside-h-m/conscious-exclusive-aw20.html"
+        target="_blank"><span>H&M Magazine</span></a>
+    </nav>
+    <p class="menu-text">La collection sera disponible le 3 décembre sur <a href="https://www.hm.com/">hm.com</a></p>
+  </div>
+  <div class="menu-overlay"></div>
+  <button id="closeActivePageButton" class="ui-button close-button"></button>
+  <button id="toggleMenu" class="ui-button burger-button is-visible"></button>
+  <div class="loading">
+    <div class="loading-pane loading-pane-top">
+      <div class="loading-progress">
+        <span class="loading-progress-count"></span>
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    <div class="loading-pane loading-pane-bottom"></div>
+    <div class="loading-progress-bar"></div>
+  </div>
+  <div class="log"></div>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SG3FWGCM60"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-SG3FWGCM60');
+  </script>
+  <script src="{% static 'assets/js/scripts.js' %}"></script>
+</body>
+
+</html>

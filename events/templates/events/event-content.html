@@ -1,0 +1,129 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}EVENTS{% endblock %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static '/css/events-modal.css' %}">
+<link rel="stylesheet" href="{% static '/css/event_button.css' %}">
+<style>
+    @media only screen and (min-width: 767px) {
+        .nav-links li.fade,
+        .nav-links-bottom-mid li.fade {
+            opacity: 1;
+            margin-left: 15%;
+            margin-right: -20%;
+        }
+        .nav-links {
+            background: url(http://127.0.0.1:8000/static/css/../img/walking-man.gif) right top no-repeat, rgba(0, 0, 0, 0.75);
+            background-size: contain;
+        }
+    }
+    
+    .allEvents::-webkit-scrollbar-thumb {
+        background-color: white;
+        background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.8) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, 0.4) 75%, transparent 75%, transparent);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <!-- Events -->
+    <div class="container" id="container">
+    
+    </div>
+    
+    <script>
+        var main = document.getElementById("container");
+        console.log(main);
+        var eventContainer = document.createElement("div");
+        eventContainer.classList.add("event-container");
+    
+        var deptName = document.createElement("div");
+        deptName.classList.add("deptName");
+        deptName.innerHTML = "{{ dept }}";
+        eventContainer.appendChild(deptName);
+    
+        var hr = document.createElement("hr");
+        eventContainer.appendChild(hr);
+    
+        var allEvents = document.createElement("div");
+        allEvents.classList.add("allEvents");
+    </script>
+    
+    {% for i in events %}
+    
+    <script>
+        var eventBlock = document.createElement("div");
+        eventBlock.classList.add("eventBlock");
+    
+        var eventImage = document.createElement("div");
+        eventImage.classList.add("eventImage");
+    
+        var img = document.createElement("img");
+        img.setAttribute("src", "{% static 'img/taqneeqpatterntq.png' %}");
+        img.style.width = "100%";
+        img.classList.add("vCenter");
+        eventImage.appendChild(img);
+        eventBlock.appendChild(eventImage);
+    
+        var eventName = document.createElement("div");
+        eventName.classList.add("eventName");
+    
+        var span1 = document.createElement("span");
+        span1.innerHTML = "{{i.name}}";
+        eventName.appendChild(span1);
+    
+        eventBlock.appendChild(eventName);
+    
+        var eventDscp = document.createElement("div");
+        eventDscp.classList.add("eventDscp");
+    
+        var span2 = document.createElement("span");
+        span2.innerHTML = "{{i.desc}}";
+        eventDscp.appendChild(span2);
+    
+        var br = document.createElement("br");
+        eventDscp.appendChild(br);
+    
+        eventBlock.appendChild(eventDscp);
+    
+        var eventReg = document.createElement("div");
+        eventReg.classList.add("eventReg");
+    
+        var buttonBox = document.createElement("div");
+        buttonBox.classList.add("buttonBox");
+        buttonBox.setAttribute("id", "first");
+    
+        var regButton = document.createElement("a");
+        regButton.setAttribute("href", "{{i.formurl}}");
+        regButton.setAttribute("target", "_blank");
+        regButton.classList.add("regButton");
+        regButton.innerHTML = "Register";
+        buttonBox.appendChild(regButton);
+    
+        var border = document.createElement("div");
+        border.classList.add("border");
+        buttonBox.appendChild(border);
+    
+        var border2 = document.createElement("div");
+        border2.classList.add("border");
+        buttonBox.appendChild(border2);
+    
+        eventReg.appendChild(buttonBox);
+        eventBlock.appendChild(eventReg);
+    
+        allEvents.appendChild(eventBlock);
+    </script>
+    {% endfor %}
+    
+    <script>
+        eventContainer.appendChild(allEvents);
+        main.appendChild(eventContainer);
+    </script>
+    
+    <!-- /Events -->
+{% endblock %} 
+
+{% block js %}
+{% endblock %}

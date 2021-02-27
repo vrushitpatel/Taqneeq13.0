@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} | Taqneeq13.0</title>
+    <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="shortcut icon" href="{% static 'img/tq_logo.png' %}">
+
+    <script src="{% static 'js/jquery-3.5.1.min.js' %} "></script>
+
+    <link rel="stylesheet" href="{% static '/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/menu.css' %}">
+
+    <link rel="preconnect" href="https://fonts.gstatic. com">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .menu-main::before {
+            top: 12%;
+        }
+        
+        .space {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("{% static 'img/17494.jpg' %}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .rectangle a {
+            text-decoration: none !important;
+        }
+        
+        @media (max-width: 767px) {
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                overflow-y: hidden;
+                overflow-x: auto;
+                position: relative;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .rectangle {
+                bottom: 4vw;
+            }
+            #FOOTER {
+                bottom: 13vw;
+            }
+        }
+    </style>
+    {% block head %}{% endblock %}
+
+</head>
+
+<body>
+    <div class="space"></div>
+
+    <!-- <a href="#" class="no-line logotype"><img src="{% static 'img/tq_logo.png' %}" alt="" class="tqSmallLogo"></a> -->
+
+    <!-- Menu -->
+    <nav>
+        <div class="menu-main">
+            <div class="bar1 longanimnd"></div>
+            <div class="bar2 longanimnd2"></div>
+            <div class="bar3 longanimnd3"></div>
+        </div>
+        <ul class="nav-links">
+            <li id="li1"><a class=" menuAfterClick1" href="{% url 'main:landing-page' %}">Home</a></li>
+            <li>
+                <a class="menuAfterClick3" href="#"></a>
+            </li>
+            <li><a class="menuAfterClick4" href="{% url 'events:ourevents' %}"> Events</a></li>
+            <li><a class="menuAfterClick2" href="{% url 'events:liveupdates' %}">Event Schedule</a></li>
+
+            <!-- <li><a class="menuAfterClick5" href="#con">Contact Us</a></li> -->
+            <li>
+                <a class="menuAfterClick5" href="#"></a>
+            </li>
+            <li><a class="menuAfterClick6" href="{% url 'core:teams-page' %}">Our Team</a></li>
+            <li>
+                <a class="menuAfterClick7" href="#"></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Menu -->
+
+    {% block content %}{% endblock %}
+
+
+    <div class="rectangle" style="box-sizing: content-box;">
+        <a href="{% url 'events:liveupdates' %}">
+            <div class="campusam animation">
+                LIVE UPDATES
+            </div>
+        </a>
+    </div>
+</body>
+
+
+<script src="{% static 'js/menu.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+{% block js %} {% endblock %}
+
+</html>

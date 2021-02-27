@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static '/css/elements_bingo.css' %}">
+	<script src="elementsarray.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+	<script type="text/javascript" src="{% static '/js/elements_bingo.js' %}" defer></script>
+</head>
+<body>
+	<div class="messagesOuter">
+		<div id="questions"></div>
+		<div id="noOfTries"></div>
+		<div id="message"></div>
+	</div>
+	
+	<div class="buttonOuter">
+		<button class="buttons" type="button" id="play">Get a clue!</button>
+		<button class="buttons" type="button" id="reset">Reset</button>
+	</div>
+	
+	<div id="bingoHeadOuter" class="bingo">
+		<table class="bingoSquares">
+			<th class="bingoHead">B</th>
+			<th class="bingoHead">I</th>
+			<th class="bingoHead">N</th>
+			<th class="bingoHead">G</th>
+			<th class="bingoHead">O</th>
+		</table>
+	</div>
+	
+	<div class="bingo">
+		<table class="bingoSquares" id="bingoboard"></table>
+	</div>
+
+</body>
+</html>
